@@ -1,4 +1,8 @@
 import React from 'react'
+import icon1 from './icons/icon1.png'
+import icon2 from './icons/icon2.png'
+import icon3 from './icons/icon3.png'
+import icon4 from './icons/icon4.png'
 
 function Description() {
     return (
@@ -27,49 +31,48 @@ function Description() {
                 <div className="features">
                     <div className="tile access">
                         <img
-                            src="https://raw.githubusercontent.com/hammercait/fylo-dark-theme-landing-page/658fd0afb4462e6a7e94996ab981bb7d5b336997/images/icon-access-anywhere.svg"
-                            alt="access icon"
+                            src={icon1}
+                            alt="tick icon"
                         />
-                        <h3>Access your files, anywhere</h3>
+                        <h3>Works with any video</h3>
                         <p>
-                            The ability to use a smartphone, tablet, or computer to access
-                            your account means your files follow you everywhere.
+                            The ability to use QueryTube on literally any
+                            YouTube video and get the answer.
                         </p>
                     </div>
                     <div className="tile security">
                         <img
-                            src="https://raw.githubusercontent.com/hammercait/fylo-dark-theme-landing-page/658fd0afb4462e6a7e94996ab981bb7d5b336997/images/icon-security.svg"
-                            alt="security icon"
+                            src={icon2}
+                            alt="fast icon"
                         />
-                        <h3>Security you can trust</h3>
+                        <h3>Lightning Fast</h3>
                         <p>
-                            2-factor authentication and user-controlled encryption are
-                            just a couple of the security features we allow to help secure
-                            your files.
+                            Just enter your video link and query and get
+                            the result within a few seconds.
                         </p>
                     </div>
                     <div className="tile real-time">
                         <img
-                            src="https://raw.githubusercontent.com/hammercait/fylo-dark-theme-landing-page/658fd0afb4462e6a7e94996ab981bb7d5b336997/images/icon-collaboration.svg"
-                            alt="clock icon"
+                            src={icon3}
+                            alt="optimized icon"
                         />
-                        <h3>Real-time collaboration</h3>
+                        <h3>Optimized ML Algorithm</h3>
                         <p>
-                            Securely share files and folders with friends, family, and
-                            colleagues for live collaboration. No email attachments
-                            required.
+                            The backend algorithm is optimized frequently to
+                            enhance user experience and give the most efficient
+                            results.
                         </p>
                     </div>
                     <div className="tile storage">
                         <img
-                            src="https://raw.githubusercontent.com/hammercait/fylo-dark-theme-landing-page/658fd0afb4462e6a7e94996ab981bb7d5b336997/images/icon-any-file.svg"
-                            alt="storage icon"
+                            src={icon4}
+                            alt="extension icon"
                         />
-                        <h3>Store any type of file</h3>
+                        <h3>Now available as Extension</h3>
                         <p>
-                            Whether you're sharing holidays, photos, or work documents,
-                            Fylo as you covered, allowing for all file types to be securely
-                            stored and shared.
+                            QueryTube is also available as an extension which takes
+                            the user experience to even next-level and get the desired
+                            results within a few clicks.
                         </p>
                     </div>
                 </div>
