@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Home from './Home';
-import Original from './Original';
 import axios from 'axios';
 
 function App() {
@@ -56,7 +55,7 @@ function App() {
     //     </div>
     //   )}
     // </div>
-    <Original />
+    <Home />
   );
 }
 

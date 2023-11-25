@@ -1,18 +1,19 @@
-import React from 'react'
+import React from 'react';
+import logo1 from './logo1.png';
 
 function Navbar() {
     return (
         <header>
             <div className="navbar">
                 <img
-                    src="https://raw.githubusercontent.com/hammercait/fylo-dark-theme-landing-page/658fd0afb4462e6a7e94996ab981bb7d5b336997/images/logo.svg"
-                    className="logo"
+                    src={logo1}
+                    className="logo1"
                     alt="logo"
                 />
                 <div className="right-nav">
-                    <a href="#">Features</a>
-                    <a href="#">Team</a>
-                    <a href="#">Sign In</a>
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
                 </div>
             </div>
         </header>
