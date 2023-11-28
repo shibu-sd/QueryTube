@@ -1,10 +1,18 @@
 import React from 'react'
+import { useNavigate  } from 'react-router-dom';
 import icon1 from './icons/icon1.png'
 import icon2 from './icons/icon2.png'
 import icon3 from './icons/icon3.png'
 import icon4 from './icons/icon4.png'
 
 function Description() {
+
+    const navigate = useNavigate(); 
+
+    const handleGetStarted = () => {
+        navigate('/model'); 
+    };
+
     return (
         <div className="content">
             <div className="section1">
@@ -22,7 +30,7 @@ function Description() {
                             prompts you to ask anything related to that and answers
                             the query within seconds.
                         </h2>
-                        <button className="get-started">Get Started</button>
+                        <button className="get-started" onClick={handleGetStarted}>Get Started</button>
                     </div>
                 </div>
             </div>

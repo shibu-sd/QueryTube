@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo1 from './logo1.png';
 
 function Navbar() {
@@ -11,13 +12,12 @@ function Navbar() {
                     alt="logo"
                 />
                 <div className="right-nav">
-                    <a href="#">Home</a>
-                    <a href="#">About</a>
-                    <a href="#">Contact</a>
+                    <Link to="/">Home</Link>
+                    <Link to="/model">Model</Link> 
                 </div>
             </div>
         </header>
-    )
+    );
 }
 
-export default Navbar
+export default Navbar;

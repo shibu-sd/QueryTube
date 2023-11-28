@@ -1,62 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Home';
-import axios from 'axios';
+import Model from './Model';
 
 function App() {
-  const [question, setQuestion] = useState('');
-  const [videoLink, setVideoLink] = useState('');
-  const [answer, setAnswer] = useState('');
-
-  const handlePredict = async () => {
-    try {
-      console.log('Request payload:', { question, videoLink });
-      const response = await axios.post(
-        'http://127.0.0.1:8000/predict',
-        { question, videoLink },
-        {
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        }
-      );
-
-      setAnswer(response.data.answer);
-    } catch (error) {
-      console.error('Error:', error.response ? error.response.data : error.message);
-    }
-  };
-
-  return (
-    // <div className="App">
-    //   <h1>QueryTube</h1>
-    //   <div>
-    //     <label htmlFor="question">Question:</label>
-    //     <input
-    //       type="text"
-    //       id="question"
-    //       value={question}
-    //       onChange={(e) => setQuestion(e.target.value)}
-    //     />
-    //   </div>
-    //   <div>
-    //     <label htmlFor="videoLink">videoLink:</label>
-    //     <input
-    //       type="text"
-    //       id="videoLink"
-    //       value={videoLink}
-    //       onChange={(e) => setVideoLink(e.target.value)}
-    //     />
-    //   </div>
-    //   <button onClick={handlePredict}>Predict</button>
-    //   {answer && (
-    //     <div>
-    //       <h2>Answer :</h2>
-    //       <p>{answer}</p>
-    //     </div>
-    //   )}
-    // </div>
-    <Home />
-  );
+    return (
+        <Router>
+            <div>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/model" element={<Model />} />
+                </Routes>
+            </div>
+        </Router>
+    );
 }
 
 export default App;

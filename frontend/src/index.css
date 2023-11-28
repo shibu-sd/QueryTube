@@ -6,6 +6,13 @@ body{
     font-size:14px;
 }
 
+.model-body{
+    font-family: 'Open Sans', sans-serif;
+    /* background-image:linear-gradient(hsl(218, 28%, 15%),hsl(217, 28%, 13%)); */
+    background-color: pink;
+    font-size:14px;
+}
+
 a{
   font-size: medium;
 }
