@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Navbar from './Navbar';
+import Button from '@mui/material/Button';
+import CircularProgress from '@mui/material/CircularProgress';
 import './Model.css';
 
 function Model() {
@@ -11,8 +13,9 @@ function Model() {
 
     const handlePredict = async () => {
         try {
-            setLoading(true); 
-
+            setLoading(true);
+            setAnswer('');
+    
             const response = await axios.post(
                 'http://127.0.0.1:8000/predict',
                 { question, videoLink },
@@ -22,12 +25,12 @@ function Model() {
                     },
                 }
             );
-
+    
             setAnswer(response.data.answer);
         } catch (error) {
             console.error('Error:', error.response ? error.response.data : error.message);
         } finally {
-            setLoading(false); 
+            setLoading(false);
         }
     };
 
@@ -52,10 +55,15 @@ function Model() {
                         onChange={(e) => setVideoLink(e.target.value)}
                     />
                 </div>
-                <button className="predict-button" onClick={handlePredict} disabled={loading}>
-                    {loading ? 'Predicting...' : 'Predict'}
-                </button>
-                {loading}
+                <Button
+                    variant="contained"
+                    className="predict-button"
+                    onClick={handlePredict}
+                    disabled={loading}
+                >
+                    {loading ? <CircularProgress size={20} color="inherit" /> : 'Predict'}
+                </Button>
+                {loading && <CircularProgress className="loading-spinner" />}
                 {answer && (
                     <div className="model-answer">
                         <h2>Answer :</h2>
